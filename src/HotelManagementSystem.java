@@ -1,9 +1,9 @@
- import java.util.Scanner;
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-// Hotel class represents the hotel and its operations
+// Hotel class represent the hotel and operations
 
-// Room class represents a hotel room
+// Room class represent a hotel room
 
 // HotelManagementSystem class contains the main method to run the program
  /*public class HotelManagementSystem {
@@ -57,9 +57,8 @@ import java.util.List;
             }
         }
     }
-}
- 
- /* ==========Partie deux Lyna  =============================================================================================================================================================
+}*/
+   
   import java.util.Scanner;
  
 
@@ -75,9 +74,9 @@ public class Reservation {
 
           while (true) {
             
-              System.out.println("1. Ajouter une réservation"); hashmap 1
-              System.out.println("2. Modifier une réservation"); hashmap 2
-              System.out.println("3. Annuler une réservation");hashmap 3
+              System.out.println("1. Ajouter une réservation"); //hashmap 1
+              System.out.println("2. Modifier une réservation"); //hashmap 2
+              System.out.println("3. Annuler une réservation");//hashmap 3
               System.out.println("4. Afficher toutes les réservations");
               System.out.println("5. Quitter");
           int choice = scanner.nextInt();
@@ -136,7 +135,7 @@ public class Reservation {
                   throw new IllegalArgumentException("Date invalide.");
               }
           }
-          Lyna, [4/10/2024 9:07 AM]
+         
 private static int daysInMonth(int month, int year) {
               switch (month) {
                   case 4: case 6: case 9: case 11:
@@ -234,8 +233,7 @@ private static int daysInMonth(int month, int year) {
               public String getName() {
                   return name;
               }
-
-Lyna, [4/10/2024 9:07 AM]
+ 
 public void setName(String name) {
                   this.name = name;
               }
@@ -253,5 +251,6 @@ public void setName(String name) {
                          "\nDate de départ : " + departureDate + "\nType de chambre : " + roomType + "\n";
               }
 }*/
+ 
  
  
