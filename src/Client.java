@@ -54,12 +54,6 @@ public class Client {
         clientDB.addClient(new Client("soumia", "password9"));
         clientDB.addClient(new Client("Meriem", "password10"));
         clientDB.addClient(new Client("alice123", "password11"));
-        clientDB.addClient(new Client("bobsmith", "password12"));
-        clientDB.addClient(new Client("carol_89", "password13"));
-        clientDB.addClient(new Client("david_jones", "password14"));
-        clientDB.addClient(new Client("emily34", "password15"));
-        clientDB.addClient(new Client("franklin", "password16"));
-        
         // Créer une instance de Client
         Client client = new Client(null, null);
 
