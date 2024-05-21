@@ -42,6 +42,14 @@ public class date {
             return 31;
         }
     }
+    private String formatTime(long timeInMillis) {
+        long seconds = timeInMillis / 1000;
+          long minutes = seconds / 60;
+          long hours = minutes / 60;
+          long days = hours / 24;
+          long months = days / 30; // Estimation simple : 30 jours par mois
+          return String.format("%d months, %d days, %d hours, %d minutes", months, days % 30, hours % 24, minutes % 60);
+      }
 
     // Méthode pour vérifier si une année est bissextile
     private boolean estAnneeBissextile(int annee) {
@@ -49,3 +57,4 @@ public class date {
     }
 
 }
+
