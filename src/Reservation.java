@@ -1,71 +1,75 @@
-import java.util.HashMap;
-import java.util.Map;
+public class Reservation {
+    private int numchambre;
+    private String Nom;
+    private hash type;
+    private boolean occupe;
+    private boolean existe;
+    private date startDate;
+    private date endDate;
 
-
-
-class Reservation {
-	 private int numchambre;
-	    private String Nom;
-	    private HashMap;
-	    private boolean occupé;
-	    private boolean exist;
-    private long startDate;
-    private long endDate;
-
-    public Reservation(int roomId, String roomType, long startDate, long endDate) {
-        this.roomId = roomId;
-        this.roomType = roomType;
+    public Reservation(int numchambre, String Nom, hash type, boolean occupe, boolean existe, date startDate, date endDate) {
+        this.numchambre = numchambre;
+        this.Nom = Nom;
+        this.type = type;
+        this.occupe = occupe;
+        this.existe = existe;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public int getRoomId() {
-        return roomId;
+    public int getNumchambre() {
+        return numchambre;
     }
 
-    public String getRoomType() {
-        return roomType;
+    public void setNumchambre(int numchambre) {
+        this.numchambre = numchambre;
     }
 
-    public long getStartDate() {
+    public String getNom() {
+        return Nom;
+    }
+
+    public void setNom(String Nom) {
+        this.Nom = Nom;
+    }
+
+    public hash getType() {
+        return type;
+    }
+
+    public void setType(Hash type) {
+        this.type = type;
+    }
+
+    public boolean isOccupe() {
+        return occupe;
+    }
+
+    public void setOccupe(boolean occupe) {
+        this.occupe = occupe;
+    }
+
+    public boolean isExiste() {
+        return existe;
+    }
+
+    public void setExiste(boolean existe) {
+        this.existe = existe;
+    }
+
+    public date getStartDate() {
         return startDate;
     }
 
-    public long getEndDate() {
+    public void setStartDate(date startDate) {
+        this.startDate = startDate;
+    }
+
+    public date getEndDate() {
         return endDate;
     }
-   
 
-	private String formatTime(long endDate2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
-
-/*import java.util.HashMap;
-import java.util.Map;
-
-public class Main {
-    public static void main(String[] args) {
-        // Création de la première HashMap
-        Map<String, HashMap<String, Integer>> mapDeMaps = new HashMap<>();
-
-        // Création de la deuxième HashMap et ajout à la première HashMap
-        HashMap<String, Integer> innerMap1 = new HashMap<>();
-        innerMap1.put("A", 1);
-        innerMap1.put("B", 2);
-        mapDeMaps.put("Première", innerMap1);
-
-        // Création d'une autre deuxième HashMap et ajout à la première HashMap
-        HashMap<String, Integer> innerMap2 = new HashMap<>();
-        innerMap2.put("C", 3);
-        innerMap2.put("D", 4);
-        mapDeMaps.put("Deuxième", innerMap2);
-
-        // Accès aux éléments de la deuxième HashMap à partir de la première HashMap
-        System.out.println("Valeur associée à 'A' dans la première map: " + mapDeMaps.get("Première").get("A"));
-        System.out.println("Valeur associée à 'D' dans la deuxième map: " + mapDeMaps.get("Deuxième").get("D"));
-    }*/
-
-    
+    public void setEndDate(date endDate) {
+        this.endDate = endDate;
+    }
 }
