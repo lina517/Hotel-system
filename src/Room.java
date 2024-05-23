@@ -5,44 +5,55 @@ public class Room {
     private String Typeroom;
     private date dateDebut;
     private date dateFin;
+    private boolean occupe;
 
-    public Room(int IDchambre,String type ) {
+    public Room(int IDchambre, String type, date dateDebut, date dateFin) {
         this.IDchambre = IDchambre;
-        this.Typeroom = Typeroom;        
-    }
-    public Room(date datedDebut,date dateFin) {
-        this.dateDebut = datedDebut;
+        this.Typeroom = type;
+        this.dateDebut = dateDebut;
         this.dateFin = dateFin;
     }
-	public int getIDchambre() {
+
+    public int getIDchambre() {
         return IDchambre;
     }
+
+    public String getTyperoom() {
+        return Typeroom;
+    }
+
+    public date getDateDebut() {
+        return dateDebut;
+    }
+
+    public void setDateDebut(date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    public date getDateFin() {
+        return dateFin;
+    }
+
+    public void setDateFin(date dateFin) {
+        this.dateFin = dateFin;
+    }
+    public boolean isOccupe() {
+        return occupe;
+    }
+
+    public void setOccupe(boolean occupe) {
+        this.occupe = occupe;
+    } 
     public void release() {
-    	this.dateDebut = null;
-    	this.dateFin = null;
-    	
+        this.dateDebut = null;
+        this.dateFin = null;
     }
-   public boolean isReserved() {
-		// dateDut verification de date debut et fin <> null
-		return false;
-	}
+
+    public boolean isReserved() {
+        return (dateDebut != null && dateFin != null);
+    }
+
     public void book(date dateDebut, date dateFin) {
-    	        this.dateDebut = dateDebut;
-    	        this.dateFin = dateFin;
-    	        // demande la datedebut et fin from user 
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
     }
-    	 
-public static void main(String[] args) {
-    
-}
-
-	
-	public Object getStartdate() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public Object getdateDebut() {
-		// TODO Auto-generated method stub
-		return null;
-	}}
-
