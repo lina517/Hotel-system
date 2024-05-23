@@ -56,4 +56,4 @@ public class Room {
     public void book(date dateDebut, date dateFin) {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
-    }
+    }}
