@@ -37,7 +37,12 @@ public class Client {
         public void setPassword(String password) {
             this.password = password;
         }
-    }
+        public Object getUsername1() {
+    		// TODO Auto-generated method stub
+    		return null;
+    	}
+        }
+    
     public static void main(String[] args) {
         // Créer la base de données des Clients
         ClientDatabase clientDB = new ClientDatabase();
@@ -48,12 +53,7 @@ public class Client {
         clientDB.addClient(new Client("Safa", "password3"));
         clientDB.addClient(new Client("Mohammed", "password4"));
         clientDB.addClient(new Client("Linda", "password5"));
-        clientDB.addClient(new Client("Marya", "password6"));
-        clientDB.addClient(new Client("Houda", "password7"));
-        clientDB.addClient(new Client("malak", "password8"));
-        clientDB.addClient(new Client("soumia", "password9"));
-        clientDB.addClient(new Client("Meriem", "password10"));
-        clientDB.addClient(new Client("alice123", "password11"));
+        
         // Créer une instance de Client
         Client client = new Client(null, null);
 
@@ -110,5 +110,5 @@ public class Client {
 //
 }
     }
-    }
-    }
+    }}
+	
