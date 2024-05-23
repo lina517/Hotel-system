@@ -1,28 +1,25 @@
 public class Reservation {
-    private int numchambre;
-    private String Nom;
-    private hash type;
-    private boolean occupe;
+    private int IDchambre;
+    private HotelRooms type;
     private boolean existe;
-    private date startDate;
-    private date endDate;
+    private date dateDebut;
+    private date dateFin;
 
-    public Reservation(int numchambre, String Nom, hash type, boolean occupe, boolean existe, date startDate, date endDate) {
-        this.numchambre = numchambre;
+    public Reservation(int IDchambre, String Nom, HotelRooms type, boolean existe, date dateDebut, date dateFin) {
+        this.IDchambre = IDchambre;
         this.Nom = Nom;
         this.type = type;
-        this.occupe = occupe;
         this.existe = existe;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
     }
 
-    public int getNumchambre() {
-        return numchambre;
+    public int getIDchambre() {
+        return IDchambre;
     }
 
-    public void setNumchambre(int numchambre) {
-        this.numchambre = numchambre;
+    public void setIDchambre(int IDchambre) {
+        this.IDchambre = IDchambre;
     }
 
     public String getNom() {
@@ -33,21 +30,15 @@ public class Reservation {
         this.Nom = Nom;
     }
 
-    public hash getType() {
+    public HotelRooms getType() {
         return type;
     }
 
-    public void setType(Hash type) {
+    public void setType(HotelRooms type) {
         this.type = type;
     }
 
-    public boolean isOccupe() {
-        return occupe;
-    }
-
-    public void setOccupe(boolean occupe) {
-        this.occupe = occupe;
-    }
+   
 
     public boolean isExiste() {
         return existe;
@@ -57,19 +48,19 @@ public class Reservation {
         this.existe = existe;
     }
 
-    public date getStartDate() {
-        return startDate;
+    public date getdateDebut() {
+        return dateDebut;
     }
 
-    public void setStartDate(date startDate) {
-        this.startDate = startDate;
+    public void setdateDebut(date dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
-    public date getEndDate() {
-        return endDate;
+    public date getdateFin() {
+        return dateFin;
     }
 
-    public void setEndDate(date endDate) {
-        this.endDate = endDate;
+    public void setdateFin(date dateFin) {
+        this.dateFin = dateFin;
     }
 }
