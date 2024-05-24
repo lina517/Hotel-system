@@ -1,44 +1,67 @@
 public class Reservation {
-    private int IDchambre;
+     
+	private int IDchambre;
     private HotelRooms type;
     private boolean existe;
+    private Client IDclient;
     private date dateDebut;
     private date dateFin;
+    private int reservationCounter;
 
-    public Reservation(int IDchambre, String Nom, HotelRooms type, boolean existe, date dateDebut, date dateFin) {
+    public Reservation(int reservationCounter,int IDchambre, Client IDclient, date dateDebut, date dateFin) {
         this.IDchambre = IDchambre;
-        this.Nom = Nom;
-        this.type = type;
-        this.existe = existe;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.IDchambre = IDchambre;
+        this.IDclient = IDclient;
+        this.reservationCounter= reservationCounter;
+        
+    }
+
+     
+
+	public void book(date dateDebut, date dateFin) {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
     }
-
-    public int getIDchambre() {
+	public int getIDchambre() {
         return IDchambre;
     }
 
     public void setIDchambre(int IDchambre) {
         this.IDchambre = IDchambre;
     }
-
-    public String getNom() {
-        return Nom;
+    
+    public void setdateFin(date dateFin) {
+        this.dateFin = dateFin;
     }
-
-    public void setNom(String Nom) {
-        this.Nom = Nom;
+    
+    public void setdateDebut(date dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
     public HotelRooms getType() {
         return type;
     }
+    
+    public date getdateDebut() {
+        return this.dateDebut;
+    }
+    
+    public int getChambre() {
+        return this.IDchambre;
+    }
 
     public void setType(HotelRooms type) {
         this.type = type;
     }
+    public void setclient(Client client) {
+	this.IDclient = client;
+}
 
-   
+   public Client hetclient() {
+	   return IDclient;
+   }
 
     public boolean isExiste() {
         return existe;
@@ -48,19 +71,8 @@ public class Reservation {
         this.existe = existe;
     }
 
-    public date getdateDebut() {
-        return dateDebut;
-    }
-
-    public void setdateDebut(date dateDebut) {
-        this.dateDebut = dateDebut;
-    }
-
-    public date getdateFin() {
-        return dateFin;
-    }
-
-    public void setdateFin(date dateFin) {
-        this.dateFin = dateFin;
-    }
+	public Room getRoom() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
