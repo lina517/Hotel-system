@@ -3,13 +3,13 @@ public class HotelRooms {
     private Map<Integer, Reservation> reservations;
     private int reservationCounter;
 
-    public void Reservation(int IDchambre, String client, date dateDebut, date dateFin) {
+    public void Reservation(int reservationCounter,int IDchambre, Client IDclient, date dateDebut, date dateFin) {
         Room chambre = Rooms.get(IDchambre);
         if (chambre == null || chambre.isOccupe()) {
             throw new IllegalArgumentException("Chambre non disponible.");
         }
         reservationCounter++;
-        Reservation reservation = new Reservation(reservationCounter, chambre, client, dateDebut, dateFin);
+        Reservation reservation = new Reservation(reservationCounter, IDchambre, IDclient, dateDebut, dateFin);
         reservations.put(reservationCounter, reservation);
         chambre.reserver();
     }
