@@ -6,6 +6,7 @@ public class Room {
     private date dateDebut;
     private date dateFin;
     private boolean occupe;
+    private String Room;
 
     public Room(int IDchambre, String type, date dateDebut, date dateFin) {
         this.IDchambre = IDchambre;
@@ -13,7 +14,27 @@ public class Room {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
     }
+ 
+        public Room(int IDchambre) {
+            this.IDchambre = IDchambre;
+            this.occupe = false;
+        }
 
+        public boolean isOccupe() {
+            return occupe;
+        }
+        public boolean getisOccupe() {
+        	return isOccupe();
+        }
+
+        public void reserver() {
+            occupe = true;
+        }
+
+        public void liberer() {
+            occupe = false;
+        }
+    
     public int getIDchambre() {
         return IDchambre;
     }
@@ -22,38 +43,19 @@ public class Room {
         return Typeroom;
     }
 
-    public date getDateDebut() {
-        return dateDebut;
-    }
-
-    public void setDateDebut(date dateDebut) {
-        this.dateDebut = dateDebut;
-    }
-
-    public date getDateFin() {
-        return dateFin;
-    }
-
-    public void setDateFin(date dateFin) {
-        this.dateFin = dateFin;
-    }
-    public boolean isOccupe() {
+    
+    public boolean setOccupe(boolean occupe) {
+        this.occupe = occupe;
+        return occupe;}
+    
+    public boolean getoccupe() {
         return occupe;
     }
 
-    public void setOccupe(boolean occupe) {
-        this.occupe = occupe;
-    } 
-    public void release() {
-        this.dateDebut = null;
-        this.dateFin = null;
-    }
-
-    public boolean isReserved() {
-        return (dateDebut != null && dateFin != null);
-    }
 
     public void book(date dateDebut, date dateFin) {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
-    }}
+    }
+ 
+}
