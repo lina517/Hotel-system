@@ -6,7 +6,7 @@ public class Reservation {
     private Client IDclient;
     private date dateDebut;
     private date dateFin;
-    private int reservationCounter;
+    public int reservationCounter;
 
     public Reservation(int reservationCounter,int IDchambre, Client IDclient, date dateDebut, date dateFin) {
         this.IDchambre = IDchambre;
@@ -17,7 +17,7 @@ public class Reservation {
         this.reservationCounter= reservationCounter;
         
     }
-
+    
      
 
 	public void book(date dateDebut, date dateFin) {
@@ -75,4 +75,14 @@ public class Reservation {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
+	public Integer getReservationCounter() {
+        return reservationCounter; // Retourne la valeur actuelle du compteur de réservation
+    }
+	public void setReservationCounter(int ReservationCounter) {
+		this.reservationCounter = ReservationCounter;
+	}
+
 }
