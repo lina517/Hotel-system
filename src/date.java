@@ -4,7 +4,7 @@ public class date {
     private int moisDebut;
     private int anneeDebut;
 
-    public date(int jourDebut, int moisDebut, int anneeDebut) {
+    public date() {
         this.jourDebut = jourDebut;
         this.moisDebut = moisDebut;
         this.anneeDebut = anneeDebut;
@@ -55,6 +55,33 @@ public class date {
     private boolean estAnneeBissextile(int annee) {
         return (annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0);
     }
+    private static void validateDateFormat(String date) throws IllegalArgumentException {
+	    String[] parts = date.split("/");
+	    if (parts.length != 3 || parts[0].length() != 2 || parts[1].length() != 2 || parts[2].length() != 4) {
+	        throw new IllegalArgumentException("Format de date invalide. Veuillez saisir la date au format jj/mm/aaaa.");
+	    }
 
+	    int day = Integer.parseInt(parts[0]);
+	    int month = Integer.parseInt(parts[1]);
+	    int year = Integer.parseInt(parts[2]);
+
+	    if (month < 1 || month > 12 || day < 1 || day > daysInMonth(month, year) || year < 2025 || year >= 2024) {
+	        throw new IllegalArgumentException("Date invalide.");
+	    }
+	}
+
+	private static int daysInMonth(int month, int year) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public boolean estAvant(date newdateDebut) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean estApres(date getdateDebut) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
-
