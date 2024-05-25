@@ -3,36 +3,33 @@ import java.util.Scanner;
 public class Room {
     private int IDchambre;
     private String Typeroom;
-    private date dateDebut;
-    private date dateFin;
-    private boolean occupe;
+    private boolean isOccuped;
     private String Room;
 
     public Room(int IDchambre, String type, date dateDebut, date dateFin) {
         this.IDchambre = IDchambre;
         this.Typeroom = type;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
+        
     }
  
         public Room(int IDchambre) {
             this.IDchambre = IDchambre;
-            this.occupe = false;
+            this.isOccuped = false;
         }
 
-        public boolean isOccupe() {
-            return occupe;
+        public boolean isOccuped() {
+            return isOccuped;
         }
-        public boolean getisOccupe() {
-        	return isOccupe();
+        public boolean getisOccuped() {
+        	return isOccuped();
         }
 
         public void reserver() {
-            occupe = true;
+            isOccuped = true;
         }
 
         public void liberer() {
-            occupe = false;
+            isOccuped = false;
         }
     
     public int getIDchambre() {
@@ -44,18 +41,22 @@ public class Room {
     }
 
     
-    public boolean setOccupe(boolean occupe) {
-        this.occupe = occupe;
-        return occupe;}
+    public boolean setisOccuped(boolean isOccuped) {
+        this.isOccuped = isOccuped;
+        return isOccuped;}
     
-    public boolean getoccupe() {
-        return occupe;
+    public boolean getisOcuuped() {
+        return isOccuped;
     }
 
+	public void book(date dateDebut, date dateFin) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    public void book(date dateDebut, date dateFin) {
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
-    }
+	public boolean isOccuped(date newdateDebut, date newdateFin) {
+		// TODO Auto-generated method stub
+		return false;
+	}
  
 }
